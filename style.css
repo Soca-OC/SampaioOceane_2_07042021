@@ -1,2 +1,148 @@
+/**** body ****/
+body {
+    font-family:"Raleway",sans-serif;
+    margin: 0px;
+}
+/**** fin body ****/
+
+/**** général ****/
+section,div{
+    margin: 20px;
+}
+
 /*typographie*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+/* titres */
+h1{
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+/* fin titre */
+/**** fin général ****/
+
+/****header (conteneur de logo, s'inscrire et nav)****/
+header>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/***logo****/
+header>div>img {
+    width: 100px;
+}
+/***lien s'inscrire***/
+header>div>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #0065FC;
+    font-size: 1.2em;
+}
+/***navigation***/
+nav>ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+}
+nav>ul>li{
+    width: 50%;
+    border-bottom: 3px solid #F2F2F2;
+    padding: 10px;
+}
+/**bordure lien actif**/
+nav>ul>li.lien-actif{
+    border-bottom: 3px solid #0065FC;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    font-size: 1em; 
+    font-weight: bold;
+    color: black;     
+}
+/** lien actif **/
+nav>ul>li.lien-actif>a{
+    color: #0065FC;
+}
+/**** fin header ****/
+
+/**** Section Recherche ****/
+section{
+    padding-top: 5px;
+}
+span{
+    font-size: 1.1em;
+}
+form{
+    margin: 30px 0;
+    border-radius: 5px;
+    display: flex;
+}
+form>input{
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid #F2F2F2;
+    padding: 10px;
+}
+form>img{
+    width: 20px;
+    padding: 20px;
+}
+form>img.logo-point-map{
+    background-color: #F2F2F2;
+    border-radius: 5px 0 0 5px;
+    width: 15px;
+    
+}
+form>img.logo-recherche{
+    background-color: #0065FC;
+    border-radius: 10px;
+    margin-left: -10px;
+    width: 20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Ordinateur*/
+@media screen and (min-width: 1024px){
+
+body{
+    margin: 50px;
+}    
+
+}
+
+/*Tablette*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}

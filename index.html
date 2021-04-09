@@ -2,17 +2,20 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêves">
         <link rel="stylesheet" type="text/css" href="style.css">
         <title> Reservia </title>
     </head>
     <body>
         <header>
-            <img src="images/logo/reservia-logo.png" alt="Logo site"/>
-            <a href="">S'inscrire</a>
+            <div>
+                <img src="images/logo/reservia-logo.png" alt="Logo site"/>
+                <a href="">S'inscrire</a>
+            </div>
             <nav>
                 <ul>
-                    <li>
+                    <li class="lien-actif">
 <!--Encre qui mène à la section hébergements-->
                         <a href="#hebergements">Hébergements</a>
                     </li>
@@ -23,38 +26,43 @@
                 </ul>
             </nav>
         </header>
+<!--Section recherche-->
         <section>
-            <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <span>En plein centre ville ou en pleine nature</span>
             <form>
+                <img src="images/logo/map-marker-alt-solid.svg" class="logo-point-map"/>
                 <input type="search" name="search" placeholder="Marseille, France">
+                <img src="images/logo/search-solid.svg" class="logo-recherche"/>
             </form>
-            <dt>Filtres</dt>
+            <h4>Filtre</h4>
 <!--Liste filtres-->
-            <dd>
-                <a href="">
-                    <img src="images/logo/money-bill-wave-solid.svg" alt="logo economique"/>
-                    <span>Economique</span>
-                </a>
-            </dd>
-            <dd>
-                <a href="">
-                    <img src="images/logo/child-solid.svg" alt="logo familial"/>
-                    <span>Familial</span>
-                </a>
-            </dd>
-            <dd>
-                <a href="">
-                    <img src="images/logo/heart-solid.svg" alt="logo romantique"/>
-                    <span>Romantique</span>
-                </a>
-            </dd>
-            <dd>
-                <a href="">
-                    <img src="images/logo/dog-solid.svg" alt="logo animaux"/>
-                    <span>Animaux autorisés</span>
-                </a>
-            </dd>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/logo/money-bill-wave-solid.svg" alt="logo economique"/>
+                        <span>Economique</span>
+                    </a>
+                </li>
+                <li> 
+                    <a href="">
+                        <img src="images/logo/child-solid.svg" alt="logo familial"/>
+                        <span>Familial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/logo/heart-solid.svg" alt="logo romantique"/>
+                        <span>Romantique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/logo/dog-solid.svg" alt="logo animaux"/>
+                        <span>Animaux autorisés</span>
+                    </a>
+                </li>
+            </ul>
             <div>
                 <img src="images/logo/info-solid.svg" alt="logo information"/>
                 <p>
@@ -62,45 +70,45 @@
                 </p>
             </div>
         </section>
-        <section>
 <!--Mise en avant des hebergements populaires-->
-            <aside>
-                <div>
-                    <h2>Les plus populaires</h2>
-                    <img src="images/logo/chart-line-solid.svg" alt="logo populaire"/>
-                </div>
-                <article>
-                    <a href="">
-                        <img src="images/hebergement/petit/hotel-le-soleil-du-matin.jpg" alt="hôtel le soleil du matin"/>
-                        <div>
-                            <h3>Hôtel Le soleil du matin</h3>
-                            <p>Nuit à partir de 128€</p>
-                            <img src="" alt="5 étoiles"/>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="images/hebergement/petit/au-coeur-de-l-eau.jpg" alt="Au coeur de l'eau"/>
-                        <div>
-                            <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                            <p>Nuit à partir de 71€</p>
-                            <img src="" alt="4 étoiles"/>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="images/hebergement/petit/tout-bleu-et-blanc.jpg" alt="Tout bleu et blanc"/>
-                        <div>
-                            <h3>Hotel Tout bleu et blanc</h3>
-                            <p>Nuit à partir de 68€</p>
-                            <img src="" alt="4 étoiles"/>
-                        </div>
-                    </a>
-                </article>
-            </aside>
+        <aside>
+            <div>
+                <h2>Les plus populaires</h2>
+                <img src="images/logo/chart-line-solid.svg" alt="logo populaire"/>
+            </div>
+            <article>
+                <a href="">
+                    <img src="images/hebergement/petit/hotel-le-soleil-du-matin.jpg" alt="hôtel le soleil du matin"/>
+                    <div>
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <p>Nuit à partir de 128€</p>
+                        <img src="" alt="5 étoiles"/>
+                    </div>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/hebergement/petit/au-coeur-de-l-eau.jpg" alt="Au coeur de l'eau"/>
+                    <div>
+                        <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                        <p>Nuit à partir de 71€</p>
+                        <img src="" alt="4 étoiles"/>
+                    </div>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/hebergement/petit/tout-bleu-et-blanc.jpg" alt="Tout bleu et blanc"/>
+                    <div>
+                        <h3>Hotel Tout bleu et blanc</h3>
+                        <p>Nuit à partir de 68€</p>
+                        <img src="" alt="4 étoiles"/>
+                    </div>
+                </a>
+            </article>
+        </aside>
 <!--Hebergement dans la ville choisit-->
+        <section>
             <h2 id="hebergements">Hébergements à Marseille</h2>
             <article>
                 <a href="">
