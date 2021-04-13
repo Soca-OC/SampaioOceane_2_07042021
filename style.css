@@ -1,26 +1,72 @@
+/**** général ****/
+section, header>div{
+    padding: 0 20px;
+}
+#hebergements,#activites,aside,footer{
+    padding: 30px 20px
+}
+
+/*fonts*/
+/*classique*/
+@font-face{
+    font-family: "Raleway-Medium";
+    src: url(font/Raleway-Medium.ttf);
+}
+/*gras*/
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url(font/Raleway-Bold.ttf);
+}
+/* Utilise Raleway-Medium */
+body {
+    font-family:"Raleway-Medium",sans-serif;
+}
+/* Utilise Raleway-Bold */
+h1,h2,h3,h4,b,header>div>a,section#recherche>form>input,section#recherche>ul>li>a>span,section#hebergements>a{
+    font-family: "Raleway-Bold";
+}
+/* fin fonts */
+
+/* titres */
+h1,h2{
+    text-align: left;
+    margin-bottom: 15px;
+}
+h2{
+    margin-top: 0;
+    font-size: 1.3em;
+}
+h3{
+    font-size: 1em;
+    margin:0;
+}
+h4{
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px 0;
+}
+/* fin titre */
+/* icone */
+.icone{
+    width: 20px;
+    height: 20px;
+}
+.star{
+    width: 13px;
+}
+/* notation étoile */
+.note-etoile{
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+/**** fin général ****/
+
 /**** body ****/
 body {
-    font-family:"Raleway",sans-serif;
     margin: 0px;
 }
 /**** fin body ****/
-
-/**** général ****/
-section,div{
-    margin: 20px;
-}
-
-/*typographie*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
-
-/* titres */
-h1{
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 10px;
-}
-/* fin titre */
-/**** fin général ****/
 
 /****header (conteneur de logo, s'inscrire et nav)****/
 header>div {
@@ -36,7 +82,6 @@ header>div>img {
 /***lien s'inscrire***/
 header>div>a{
     text-decoration: none;
-    font-weight: bold;
     color: #0065FC;
     font-size: 1.2em;
 }
@@ -70,75 +115,204 @@ nav>ul>li.lien-actif>a{
 /**** fin header ****/
 
 /**** Section Recherche ****/
-section{
+section#recherche{
     padding-top: 5px;
 }
-span{
+/*** Description ***/
+section#recherche>span{
     font-size: 1.1em;
 }
-form{
+/*** zone de recherche ***/
+section#recherche>form{
     margin: 30px 0;
     border-radius: 5px;
     display: flex;
 }
-form>input{
-    font-size: 1.1em;
-    font-weight: bold;
+section#recherche>form>input{
+    font-size: 1.2em;
     border: 1px solid #F2F2F2;
     padding: 10px;
+    width: 230px;
 }
-form>img{
+section#recherche>form>img{
     width: 20px;
     padding: 20px;
 }
-form>img.logo-point-map{
+section#recherche>form>img.point-map{
     background-color: #F2F2F2;
-    border-radius: 5px 0 0 5px;
-    width: 15px;
-    
+    border-radius: 10px 0 0 10px;
+    padding: 20px ;
 }
-form>img.logo-recherche{
+section#recherche>form>img.recherche{
     background-color: #0065FC;
     border-radius: 10px;
-    margin-left: -10px;
-    width: 20px;
+    margin-left: -10px;  
+    padding: 20px ;
+}
+section#recherche>form>span{
+    visibility: hidden;
+    width: 0px;
+    margin: -100px;
+}
+/*** Filtres ***/
+section#recherche>ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+section#recherche>ul>li{
+    margin: 5px 5px 5px 0;
+}
+section#recherche>ul>li>a{
+    display: flex;
+    align-items: center;
+    border: 2px solid #F2F2F2;
+    border-radius: 100px;
+    text-decoration: none;
+}
+section#recherche>ul>li>a>img.icone{
+    border-radius: 100px;
+    background-color: #DEEBFF;
+    padding: 12px;
+    margin: -2px;
+}
+section#recherche>ul>li>a>span{
+    padding: 10px 20px;
+    color: #000;
+}
+/***Information***/
+section#recherche>div{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin: 30px 0;
+}
+section#recherche>div>img.icone{
+    border-radius: 100px;
+    border: #F2F2F2 1px solid ;
+}
+section#recherche>div>img.information{
+    width: 13px;
+    height: 10px;
+    border: 2px #F2F2F2 solid;
+    padding: 5px;
+}
+section#recherche>div>p{
+    margin: 3px 0 0 10px;
     
 }
+/**** fin section recherche ****/
+/**** Aside ****/ 
+aside{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+}
+/*** Titre ***/
+aside>div{
+    display: flex;
+    justify-content: space-between;
+}
+/*** Hebergements ***/
+aside>article>a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+}
+aside>article>a>img{
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 0px 0 15px;
+    margin: 3px;
+    overflow: hidden;
+}
+aside>article>a>div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 200px;
+}
+aside>article>a>div>p{
+    padding: 0px;
+    margin: -10px 0;
+    font-size: 0.9em;
+}
+/**** fin aside ****/
 
+/**** Hebergement & Activités ****/
+section#hebergements>article, section#activites>article, aside>article{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 29px -20px rgba(0,0,0,0.75);
+}
+section#hebergements>article, aside>article{
+    margin: 5px 0;
+    padding: 3px;
+}
+section#hebergements>article>a, section#activites>article>a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+section#hebergements>article>a>img, section#activites>article>a>img{
+    height: 125px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+/**** Hebergement ****/
+section#hebergements>article>a>div{
+    padding: 10px 20px;
+}
+section#hebergements>article>a>div>p{
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+section#hebergements>article:nth-child(7){
+    margin-bottom: 30px;
+}
+section#hebergements>a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+/**** fin hebergements ****/
+/**** Activites ****/
+section#activites > article{
+    padding: 0;
+    margin: 30px 0;
+}
+section#activites>article>a>h3{
+    padding: 20px;
+}
 
+/**** Fin activites ****/
+/**** Footer ****/
+footer{
+    background-color: #F2F2F2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+footer>article{
+    display: flex;
+    flex-direction:column ;
+    margin-bottom: 30px;
+}
+footer>article>a{
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+/**** Fin footer ****/
 
 /*Ordinateur*/
 @media screen and (min-width: 1024px){
+header{
+    padding: 20px;
 
-body{
-    margin: 50px;
-}    
+}
 
 }
 

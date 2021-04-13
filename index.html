@@ -5,6 +5,7 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêves">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="petite_resolution.css" />
         <title> Reservia </title>
     </head>
     <body>
@@ -27,44 +28,45 @@
             </nav>
         </header>
 <!--Section recherche-->
-        <section>
+        <section id="recherche">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <span>En plein centre ville ou en pleine nature</span>
             <form>
-                <img src="images/logo/map-marker-alt-solid.svg" class="logo-point-map"/>
+                <img src="images/logo/map-marker-alt-solid.svg" alt="point carte" class="icone point-map"/>
                 <input type="search" name="search" placeholder="Marseille, France">
-                <img src="images/logo/search-solid.svg" class="logo-recherche"/>
+                <img src="images/logo/search-solid.svg" alt="loupe" class="icone recherche"/>
+                <span>Recherche</span>
             </form>
-            <h4>Filtre</h4>
+            <h4>Filtres</h4>
 <!--Liste filtres-->
             <ul>
                 <li>
                     <a href="">
-                        <img src="images/logo/money-bill-wave-solid.svg" alt="logo economique"/>
+                        <img src="images/logo/money-bill-wave-solid.svg" alt="logo economique" class="icone"/>
                         <span>Economique</span>
                     </a>
                 </li>
                 <li> 
                     <a href="">
-                        <img src="images/logo/child-solid.svg" alt="logo familial"/>
+                        <img src="images/logo/child-solid.svg" alt="logo familial" class="icone"/>
                         <span>Familial</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="images/logo/heart-solid.svg" alt="logo romantique"/>
+                        <img src="images/logo/heart-solid.svg" alt="logo romantique" class="icone"/>
                         <span>Romantique</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="images/logo/dog-solid.svg" alt="logo animaux"/>
+                        <img src="images/logo/dog-solid.svg" alt="logo animaux" class="icone"/>
                         <span>Animaux autorisés</span>
                     </a>
                 </li>
             </ul>
             <div>
-                <img src="images/logo/info-solid.svg" alt="logo information"/>
+                <img src="images/logo/info-solid.svg" alt="logo information" class="icone information"/>
                 <p>
                     Plus de 500 logements sont disponibles dans cette ville
                 </p>
@@ -74,107 +76,161 @@
         <aside>
             <div>
                 <h2>Les plus populaires</h2>
-                <img src="images/logo/chart-line-solid.svg" alt="logo populaire"/>
+                <img src="images/logo/chart-line-solid.svg" alt="logo populaire" class="icone"/>
             </div>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/hotel-le-soleil-du-matin.jpg" alt="hôtel le soleil du matin"/>
+                    <img src="images/hebergements/hotel-le-soleil-du-matin.jpg" alt="hôtel le soleil du matin"/>
                     <div>
                         <h3>Hôtel Le soleil du matin</h3>
-                        <p>Nuit à partir de 128€</p>
-                        <img src="" alt="5 étoiles"/>
+                        <p>Nuit à partir de 128<b>€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/au-coeur-de-l-eau.jpg" alt="Au coeur de l'eau"/>
+                    <img src="images/hebergements/au-coeur-de-l-eau.jpg" alt="Au coeur de l'eau"/>
                     <div>
                         <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                        <p>Nuit à partir de 71€</p>
-                        <img src="" alt="4 étoiles"/>
+                        <p>Nuit à partir de 71<b>€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/tout-bleu-et-blanc.jpg" alt="Tout bleu et blanc"/>
+                    <img src="images/hebergements/tout-bleu-et-blanc.jpg" alt="Tout bleu et blanc"/>
                     <div>
                         <h3>Hotel Tout bleu et blanc</h3>
-                        <p>Nuit à partir de 68€</p>
-                        <img src="" alt="4 étoiles"/>
+                        <p>Nuit à partir de 68<b>€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
         </aside>
 <!--Hebergement dans la ville choisit-->
-        <section>
-            <h2 id="hebergements">Hébergements à Marseille</h2>
+        <section id="hebergements">
+            <h2>Hébergements à Marseille</h2>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/auberge-la-cannebiere.jpg" alt="Cannebière"/>
+                    <img src="images/hebergements/auberge-la-cannebiere.jpg" alt="Cannebière"/>
                     <div>
                         <h3>Auberge la Cannebière</h3>
-                        <p>Nuit à partir de 25€</p>
-                        <img src="" alt="4 étoiles"/>
+                        <p>Nuit à partir de <b>25€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/hotel-du-port.jpg" alt="Du Port"/>
+                    <img src="images/hebergements/hotel-du-port.jpg" alt="Du Port"/>
                     <div>
                         <h3>Hotel du Port</h3>
-                        <p>Nuit à partir de 52€</p>
-                        <img src="" alt="5 étoiles"/>
+                        <p>Nuit à partir de <b>52€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        </div>
                     </div>
                 </a>
            </article>
            <article>
                 <a href="">
-                    <img src="images/hebergement/petit/hotel-les-mouettes.jpg" alt="Les mouettes"/>
+                    <img src="images/hebergements/hotel-les-mouettes.jpg" alt="Les mouettes"/>
                     <div>
                         <h3>Hôtel Les mouettes</h3>
-                        <p>Nuit à partir de 76€</p>
-                        <img src="" alt="4 étoiles"/>
+                        <p>Nuit à partir de <b>76€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/hotel-de-la-mer.jpg" alt="Mer"/>
+                    <img src="images/hebergements/hotel-de-la-mer.jpg" alt="Mer"/>
                     <div>
                     <h3>Hôtel de la mer</h3>
-                    <p>Nuit à partir de 46€</p>
-                    <img src="" alt="3 étoiles"/>
+                    <p>Nuit à partir de <b>46€</b></p>
+                    <div class="note-etoile">
+                        <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                    </div>
                 </div>
                </a>
             </article>
             <article>
                 <a href=""> 
-                    <img src="images/hebergement/petit/auberge-le-panier.jpg" alt="Le Panier"/>
+                    <img src="images/hebergements/auberge-le-panier.jpg" alt="Le Panier"/>
                     <div>
                         <h3>Auberge Le Panier</h3>
-                        <p>Nuit à partir de 23€</p>
-                        <img src="" alt="4 étoiles"/>
+                        <p>Nuit à partir de <b>23€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid.svg" alt="étoiles" class="icone star"/>
+                        </div>
                     </div>
                 </a>
             </article>
             <article>
                 <a href="">
-                    <img src="images/hebergement/petit/hotel-chez-amina.jpg" alt="Chez Amina"/>
+                    <img src="images/hebergements/hotel-chez-amina.jpg" alt="Chez Amina"/>
                     <div>
                         <h3>Hôtel chez Amina</h3>
-                        <p>Nuit à partir de 96€</p>
-                        <img src="" alt="5 étoiles"/>
+                        <p>Nuit à partir de <b>96€</b></p>
+                        <div class="note-etoile">
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                            <img src="images/logo/star-solid-bleu.svg" alt="étoiles-bleu" class="icone star"/>
+                        </div>
                     </div>
                 </a>
            </article>
            <a href="">Afficher plus</a>
         </section>
 <!--Section Activités dans la ville choisit-->
-        <section>
-            <h2 id="activites">Activités à Marseille</h2>
+        <section id="activites">
+            <h2>Activités à Marseille</h2>
             <article>
                 <a href="">
                     <img src="images/activites/vieux-port.jpg" alt="Vieux Port"/>
