@@ -1,5 +1,5 @@
 /**** général ****/
-section, header>div{
+section{
     padding: 0 20px;
 }
 #hebergements,#activites,aside,footer{
@@ -22,7 +22,7 @@ body {
     font-family:"Raleway-Medium",sans-serif;
 }
 /* Utilise Raleway-Bold */
-h1,h2,h3,h4,b,header>div>a,section#recherche>form>input,section#recherche>ul>li>a>span,section#hebergements>a{
+h1,h2,h3,h4,b,header>a,section#recherche>form>input,section#recherche>div>ul>li>a>span,section#hebergements>a{
     font-family: "Raleway-Bold";
 }
 /* fin fonts */
@@ -69,23 +69,29 @@ body {
 /**** fin body ****/
 
 /****header (conteneur de logo, s'inscrire et nav)****/
-header>div {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 /***logo****/
-header>div>img {
+header>img {
+    padding: 0 20px;
     width: 100px;
 }
 /***lien s'inscrire***/
-header>div>a{
+header>a{
     text-decoration: none;
     color: #0065FC;
     font-size: 1.2em;
+    padding: 0 20px;
 }
 /***navigation***/
+nav{
+    width: 100%;
+}
 nav>ul{
     display: flex;
     justify-content: space-around;
@@ -127,12 +133,13 @@ section#recherche>form{
     margin: 30px 0;
     border-radius: 5px;
     display: flex;
+    align-items: center;
 }
 section#recherche>form>input{
     font-size: 1.2em;
     border: 1px solid #F2F2F2;
     padding: 10px;
-    width: 230px;
+    width: 65%;
 }
 section#recherche>form>img{
     width: 20px;
@@ -155,35 +162,35 @@ section#recherche>form>span{
     margin: -100px;
 }
 /*** Filtres ***/
-section#recherche>ul{
+section#recherche>div>ul{
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
 }
-section#recherche>ul>li{
+section#recherche>div>ul>li{
     margin: 5px 5px 5px 0;
 }
-section#recherche>ul>li>a{
+section#recherche>div>ul>li>a{
     display: flex;
     align-items: center;
     border: 2px solid #F2F2F2;
     border-radius: 100px;
     text-decoration: none;
 }
-section#recherche>ul>li>a>img.icone{
+section#recherche>div>ul>li>a>img.icone{
     border-radius: 100px;
     background-color: #DEEBFF;
     padding: 12px;
     margin: -2px;
 }
-section#recherche>ul>li>a>span{
+section#recherche>div>ul>li>a>span{
     padding: 10px 20px;
     color: #000;
 }
 /***Information***/
-section#recherche>div{
+section#recherche>div:last-child{
     display: flex;
     justify-content: center;
     align-items: start;
@@ -309,10 +316,107 @@ footer>article>a{
 
 /*Ordinateur*/
 @media screen and (min-width: 1024px){
+.icone{
+    width: 25px;
+    height: 25px;
+}
+/**** header ****/
 header{
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+header>img{
+    position: fixed;
+    left: 0;
+    align-self: center;
+}
+header>a{
+    order: 1;
+}
+nav{
+    width: auto;
+}
+nav>ul{
+    margin-top: 0;
+}
+nav>ul>li{
+    padding: 40px 30px 0px 30px;
+    border-bottom: none;
+    border-top: 2px solid white;
+}
+nav>ul>li.lien-actif{
+    border-top: 2px solid #0065FC;
+    border-bottom: none;
+}
+/**** fin header ****/
+/**** section recherche ****/
+h1{
+    margin: 0;
+    padding: 5px 0;
+}
+section#recherche>form{
+    margin: 20px 0;
+}
+section#recherche>form>input{
+    width: 260px;
+    height: 55px;
     padding: 20px;
+}
+section#recherche > form > img.point-map{
+    padding: 0 20px;
+    height: 55px;
+    width: 15px;
+    border-radius: 15px 0 0 15px;
+}
+section#recherche > span {
+    padding: 5px 0;
+}
+section#recherche > form > img.recherche{
+    visibility: hidden;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+section#recherche > form > span{
+    margin: 0;
+    visibility: visible;
+    width: auto;
+    align-self: center;
+    line-height: 55px;
+    padding: 0 15px;
+    font-size: 1.2em;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0 15px 15px 0;
+}
+
+/**filtres**/
+section#recherche > div{
+    display: flex;
+    align-items: center;
+}
+section#recherche > div > h4{
+    margin: 0 15px;
+}
+section#recherche > div > ul > li{
+    margin: 10px 15px;
 
 }
+section#recherche > div > ul > li > a > img.icone{
+    padding: 15px;
+}
+section#recherche > div > ul > li > a > span {
+    padding: 10px 10px;
+}
+section#recherche > div:last-child{
+    justify-content: start;
+    margin: 30px 15px;
+}
+section#recherche > div > img.information{
+    height: 13px;
+}
+/**** fin recherche ****/
 
 }
 
