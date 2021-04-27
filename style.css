@@ -140,6 +140,7 @@ section#recherche>form>input{
     border: 1px solid #F2F2F2;
     padding: 10px;
     width: 65%;
+    height: 60px;
 }
 section#recherche>form>img{
     width: 20px;
@@ -157,7 +158,7 @@ section#recherche>form>img.recherche{
     padding: 20px ;
 }
 section#recherche>form>span{
-    visibility: hidden;
+    display: none;
     width: 0px;
     margin: -100px;
 }
@@ -251,49 +252,49 @@ aside>article>a>div>p{
 /**** fin aside ****/
 
 /**** Hebergement & Activités ****/
-section#hebergements>article, section#activites>article, aside>article{
+div#hebergement-general>section#hebergements>div>article, section#activites>div>div>article, section#activites>div>div>div>article, aside>article{
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 0px 29px -20px rgba(0,0,0,0.75);
 }
-section#hebergements>article, aside>article{
+div#hebergement-general>section#hebergements>div>article, aside>article{
     margin: 5px 0;
     padding: 3px;
 }
-section#hebergements>article>a, section#activites>article>a{
+div#hebergement-general>section#hebergements>div>article>a, section#activites>div>div>article>a,section#activites>div>div>div>article>a{
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: black;
 }
-section#hebergements>article>a>img, section#activites>article>a>img{
+div#hebergement-general>section#hebergements>div>article>a>img, section#activites>div>div>article>a>img, section#activites>div>div>div>article>a>img{
     height: 125px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
 /**** Hebergement ****/
-section#hebergements>article>a>div{
+div#hebergement-general>section#hebergements>div>article>a>div{
     padding: 10px 20px;
 }
-section#hebergements>article>a>div>p{
+div#hebergement-general>section#hebergements>div>article>a>div>p{
     margin: 5px 0;
     font-size: 0.9em;
 }
-section#hebergements>article:nth-child(7){
+div#hebergement-general>section#hebergements>div>article:nth-child(7){
     margin-bottom: 30px;
 }
-section#hebergements>a{
+div#hebergement-general>section#hebergements>a{
     text-decoration: none;
     color: black;
     font-size: 1.1em;
 }
 /**** fin hebergements ****/
 /**** Activites ****/
-section#activites > article{
+section#activites > div > div > article, section#activites > div > div > div > article{
     padding: 0;
     margin: 30px 0;
 }
-section#activites>article>a>h3{
+section#activites> div > div > article > a > h3, section#activites> div > div > div > article > a > h3{
     padding: 20px;
 }
 
@@ -316,10 +317,11 @@ footer>article>a{
 
 /*Ordinateur*/
 @media screen and (min-width: 1024px){
-.icone{
-    width: 25px;
-    height: 25px;
+
+h2{
+    font-size: 1.3em;
 }
+
 /**** header ****/
 header{
     flex-wrap: nowrap;
@@ -327,7 +329,7 @@ header{
     align-items: baseline;
 }
 header>img{
-    position: fixed;
+    position: absolute;
     left: 0;
     align-self: center;
 }
@@ -341,7 +343,7 @@ nav>ul{
     margin-top: 0;
 }
 nav>ul>li{
-    padding: 40px 30px 0px 30px;
+    padding: 40px 40px 0px 40px;
     border-bottom: none;
     border-top: 2px solid white;
 }
@@ -354,38 +356,41 @@ nav>ul>li.lien-actif{
 h1{
     margin: 0;
     padding: 5px 0;
+    font-size: 1.4em
 }
 section#recherche>form{
     margin: 20px 0;
 }
 section#recherche>form>input{
-    width: 260px;
-    height: 55px;
+    width: 250px;
+    height: 50px;
     padding: 20px;
+    font-size: 1.2em;
 }
 section#recherche > form > img.point-map{
     padding: 0 20px;
-    height: 55px;
+    height: 50px;
     width: 15px;
     border-radius: 15px 0 0 15px;
 }
 section#recherche > span {
-    padding: 5px 0;
+    padding: 10px 0;
+    font-size: 1.05em;
 }
 section#recherche > form > img.recherche{
-    visibility: hidden;
+    display: none;
     width: 0;
     margin: 0;
     padding: 0;
 }
 section#recherche > form > span{
+    display: block;
     margin: 0;
-    visibility: visible;
     width: auto;
     align-self: center;
-    line-height: 55px;
+    line-height: 50px;
     padding: 0 15px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     background-color: #0065FC;
     color: white;
     border-radius: 0 15px 15px 0;
@@ -398,16 +403,19 @@ section#recherche > div{
 }
 section#recherche > div > h4{
     margin: 0 15px;
+    font-size: 1.1em;
+
 }
 section#recherche > div > ul > li{
-    margin: 10px 15px;
+    margin: 10px 13px;
 
 }
 section#recherche > div > ul > li > a > img.icone{
     padding: 15px;
 }
 section#recherche > div > ul > li > a > span {
-    padding: 10px 10px;
+    padding: 5px 20px;
+    font-size: 1.2em;
 }
 section#recherche > div:last-child{
     justify-content: start;
@@ -416,8 +424,162 @@ section#recherche > div:last-child{
 section#recherche > div > img.information{
     height: 13px;
 }
+section#recherche > div > p{
+    font-size: 1.1em;
+}
 /**** fin recherche ****/
+/**** hebergement ****/
+div#hebergement-general{
+    display: flex;
+    justify-content: space-between;
+}
+div#hebergement-general > section#hebergements > div > article, aside > article{
+    padding: 4px;
+}
+/*** aside ***/
+aside{
+    order: 1;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+aside > div{
+    margin-bottom: 5px;
+}
+aside > article {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+aside > article > a > img{
+    margin: 0;
+    width: 140px;
+    height: 140px;
+}
+aside > article > a > div{
+    padding: 15px;
+    width: 170px;
+}
+aside > article > a > div > p{
+    height: min-content;
+}
 
+/*** hebergements ***/
+div#hebergement-general>section#hebergements {
+    width: 100%;
+    padding: 30px;
+    background-color: #F2F2F2;
+    margin: 0 35px;
+    border-radius: 15px ;
+}
+div#hebergement-general>section#hebergements > a {
+    font-size: 1.2em;
+}
+div#hebergement-general>section#hebergements>div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+div#hebergement-general>section#hebergements>div>h2{
+    margin: 20px;
+}
+div#hebergement-general>section#hebergements>div>article{
+    width: 250px;
+    margin: 0 auto 40px auto;
+}
+div#hebergement-general > section#hebergements > div > article:nth-child(1) {
+    margin: 0 auto 40px 0;
+} 
+div#hebergement-general > section#hebergements > div > article:nth-child(4) {
+    margin: 0 auto 40px 0;
+}
+div#hebergement-general > section#hebergements > div > article:nth-child(3) {
+    margin: 0 0 40px auto;
+}
+div#hebergement-general > section#hebergements > div > article:nth-child(6){
+    margin: 0 0 40px auto;
+}
+div#hebergement-general > section#hebergements > div > article > a > div {
+    padding: 10px 10px;
+}
+/**** fin hebergements ****/
+/**** Activites ****/
+#activites{
+    margin: 60px 30px 40px 35px;
+    padding: 0;
+    align-content: flex-end;
+}
+section#activites > div {
+    display: flex;
+}
+section#activites > div > div {
+    display: flex;
+    width: 50%;
+}
+section#activites > div > div > article{
+    width: 45%;
+    margin-right: 65px;
+    width: 300px;
+}
+
+section#activites > div > div > article, section#activites > div > div > div > article{
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+section#activites > div > div > article > a > img{
+    height:425px;
+}
+
+section#activites > div > div > div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-right: 40px;
+    justify-content: space-between;
+    align-items: end;
+}
+section#activites > div > div > div > article {
+    flex: 1;
+    width: 290px;
+}
+section#activites > div > div > div > article:nth-child(1) > a > img{
+    height: 200px;
+}
+section#activites > div > div > div > article:nth-child(2) > a > img{
+    height: 100px;
+
+}
+section#activites > div > div:nth-child(2) > div > article > a > img{
+    height: 150px;
+}
+section#activites > div > div:nth-child(2) > div{
+    margin-right: 0px;
+}
+section#activites > div > div:nth-child(2){
+    justify-content: flex-end;
+    margin-left: 35px;
+}
+section#activites > div > div > article > a > h3, section#activites > div > div > div > article > a > h3{
+    height: 20px;
+}
+/**** footer ****/
+footer{
+    display: flex;
+}
+footer > article {
+    margin: 0 200px 0px 30px;
+    width: 240px;
+}
+footer > article > a{
+    font-size: 0.9em;
+}
+footer > article > h4{
+    font-size: 1em;
+}
+footer > article:nth-child(3){
+    margin-right: 0px;
+}
 }
 
 /*Tablette*/
