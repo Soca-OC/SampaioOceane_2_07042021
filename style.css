@@ -516,10 +516,10 @@ section#activites > div {
 section#activites > div > div {
     display: flex;
     width: 50%;
+    justify-content: space-between;
+    margin-right: 25px;
 }
 section#activites > div > div > article{
-    width: 45%;
-    margin-right: 65px;
     width: 300px;
 }
 
@@ -534,8 +534,6 @@ section#activites > div > div > article > a > img{
 section#activites > div > div > div{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    margin-right: 40px;
     justify-content: space-between;
     align-items: end;
 }
@@ -557,8 +555,9 @@ section#activites > div > div:nth-child(2) > div{
     margin-right: 0px;
 }
 section#activites > div > div:nth-child(2){
-    justify-content: flex-end;
-    margin-left: 35px;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 0;
 }
 section#activites > div > div > article > a > h3, section#activites > div > div > div > article > a > h3{
     height: 20px;
