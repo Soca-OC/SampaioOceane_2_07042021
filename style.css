@@ -115,11 +115,11 @@ nav>ul>li>a{
     font-weight: bold;
     color: black;     
 }
-nav>ul>li:hover{
-    border-top: 2px solid #0065FC;
-}
 nav>ul>li>a:hover{
     color: #0065FC;
+}
+nav > ul > li:hover {
+    border-bottom: 3px solid #0065FC;
 }
 /** lien actif **/
 nav>ul>li.lien-actif>a{
@@ -297,6 +297,7 @@ div#hebergement-general>section#hebergements>a{
 }
 div#hebergement-general>section#hebergements>div>article:hover, aside>article:hover,section#activites > div#container > article:hover,section#activites > div#container > div> article:hover {
     transform: scale(1.1);
+    transition: 500ms;
 }
 /**** fin hebergements ****/
 /**** Activites ****/
@@ -357,6 +358,11 @@ nav>ul>li{
     border-bottom: none;
     border-top: 2px solid white;
 }
+nav>ul>li:hover{
+    border-top: 2px solid #0065FC;
+    border-bottom: none;
+}
+
 nav>ul>li.lien-actif{
     border-top: 2px solid #0065FC;
     border-bottom: none;
@@ -525,7 +531,7 @@ section#activites > div#container {
     justify-content: space-between;
     align-items: flex-start;
 }
-section#activites > div#container > div.container-deux-sections > article:nth-child(1) > a > img{
+section#activites > div#container > div.container-deux-sections:nth-child(2) > article:nth-child(1) > a > img, section#activites > div#container > div.container-deux-sections:nth-child(4) > article:nth-child(2) > a > img{
     height: 175px;
 }
 section#activites > div#container > div.container-deux-sections > article:nth-child(1){
@@ -582,6 +588,7 @@ aside > div >img{
 }
 aside > article {
     margin: auto;
+    margin-top: 10px;
 }
 aside > article > a > div{
     width: 150px;
@@ -605,10 +612,15 @@ section#activites > div#container{
     align-items: flex-start;
 }
 section#activites > div#container > article{
-    width: 25%;
+    width: 20%;
+    height: 405px;
 }
 section#activites > div#container > article > a >img{
     height: 340px;
+}
+section#activites > div#container > div.container-deux-sections > article {
+    padding: 0;
+    margin: 35px 0;
 }
 /**** footer ****/
 footer{
